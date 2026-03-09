@@ -1,2 +1,2 @@
 # DSA-J
-complete dsa learning graph let see what happens skjhdf
+In this repo i will be documenting the complete journey of learning dsa
