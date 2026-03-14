@@ -48,6 +48,35 @@ int main() {
 
     int maxxprofit = sol.maxprofit(arr);
     cout << "Max Profit: " << maxxprofit << endl;
+
+
+    class Solution {
+public:
+    int firstUniqueEven(vector<int>& nums) {
+        multiset<int> sorted_set(nums.begin(),nums.end());
+        vector<int> sorted_array(sorted_set.begin(),sorted_set.end());
+        int count = 0;
+        for(int i = 0;i < nums.size();i++){
+            if((sorted_array[i]%2)==0){
+                bool is_unique = true;
+                if((i>0 &&sorted_array[i] == sorted_array[i-1])){
+                    is_unique = false;
+                }
+                if(i < nums.size()-1 && sorted_array[i] == sorted_array[i+1]){
+                    is_unique = false;
+                }
+                if(is_unique){
+                    return sorted_array[i];
+                }
+                
+            }
+        }
+
+        return -1;
+
+        
+    }
+};©leetcode
     
     return 0;
 }
