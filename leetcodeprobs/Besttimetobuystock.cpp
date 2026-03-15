@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+#include <set>
 using namespace std; 
 
 class Solution
@@ -51,8 +51,8 @@ int main() {
 
 
     class Solution {
-public:
-    int firstUniqueEven(vector<int>& nums) {
+    public:
+        int firstUniqueEven(vector<int>& nums) {
         multiset<int> sorted_set(nums.begin(),nums.end());
         vector<int> sorted_array(sorted_set.begin(),sorted_set.end());
         int count = 0;
@@ -76,7 +76,7 @@ public:
 
         
     }
-};©leetcode
+};
     
     return 0;
 }
