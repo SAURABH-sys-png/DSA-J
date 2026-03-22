@@ -6,13 +6,6 @@ void solve() {
     int n;
     if (!(cin >> n)) return;
 
-    if (n == 1) {
-        int res;
-        cout << "? 1 2" << endl;
-        cin >> res;
-        cout << "! 1" << endl;
-        return;
-    }
 
     auto ask = [](int u, int v) {
         cout << "? " << u << " " << v << endl;
