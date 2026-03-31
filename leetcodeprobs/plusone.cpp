@@ -2,15 +2,19 @@
 #include <cmath>
 #include <vector>
 
-using namespace std; 
+using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> plusOne(vector<int>& digits) {
+    vector<int> plusOne(vector<int> &digits)
+    {
         int n = digits.size();
 
-        for (int i = n - 1; i >= 0; i--) {
-            if (digits[i] < 9) {
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (digits[i] < 9)
+            {
                 digits[i]++;
                 return digits;
             }
@@ -18,34 +22,33 @@ public:
         }
 
         digits.insert(digits.begin(), 1);
-        
+
         return digits;
     }
 };
 
-int main() {
+int main()
+{
     vector<int> name;
     for (int i = 0; i < 5; i++)
     {
-        name.push_back(i+9);
+        name.push_back(i + 9);
     }
     for (int i = 0; i < 5; i++)
     {
         cout << name[i];
-
     }
     cout << endl;
     vector<int> plusonetwo;
-    
+
     Solution obj;
 
     plusonetwo = obj.plusOne(name);
-    cout <<"Here is " << endl;
-    for (int i = 0; i < 5; i++)//size issues
+    cout << "Here is " << endl;
+    for (int i = 0; i < 5; i++) // size issues
     {
-        
-        cout << name[i];
 
+        cout << name[i];
     }
     return 0;
 }
