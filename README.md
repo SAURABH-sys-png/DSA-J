@@ -1,2 +1,4 @@
 # DSA-J
-In this repo i will be documenting the complete journey of learning dsa
+I think i need to structure this up for my future references
+
+
