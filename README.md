@@ -13,20 +13,32 @@ DSA-J/
 │   └── tree_inorder_traversal.cpp
 │
 ├── codeforces/               # Codeforces Competitive Programming Problems
+│   ├── cf_array_max_sum.cpp
+│   ├── cf_array_permutation.cpp
 │   ├── cf_digit_construction.cpp
 │   ├── cf_distance_calculation.cpp
-│   └── cf_divisible_groups.cpp
+│   ├── cf_divisibility_check.cpp
+│   ├── cf_divisible_groups.cpp
+│   ├── cf_gcd_lcm.cpp
+│   ├── cf_sequence_generation.cpp
+│   ├── cf_simple_increment.cpp
+│   ├── cf_army.cpp
+│   └── codeforces_1.cpp
 │
-├── leetcodeprobs/            # LeetCode Problem Solutions (49 problems)
-│   ├── lc_*.cpp              # Various problem solutions
-│   └── cf_interactive_query.cpp
+├── leetcodeprobs/            # LeetCode Problem Solutions (70+ problems)
+│   ├── lc_add_two_numbers_list.cpp
+│   ├── lc_longest_substring_no_repeat.cpp
+│   ├── lc_group_anagrams.cpp
+│   ├── lc_best_time_buy_stock.cpp
+│   └── ... (70+ more problems)
+│
+├── cses_probs/               # CSES Problem Solutions
 │
 ├── Root Directory            # Core DSA Problems & Algorithms
 │   ├── binary_search_basic.cpp
 │   ├── interpolation_search.cpp
-│   ├── lc_*.cpp              # LeetCode solutions
-│   ├── cf_*.cpp              # Codeforces solutions
-│   └── prime_pair_sieve.cpp
+│   ├── prime_pair_sieve.cpp
+│   └── placeholder_greeting.cpp
 │
 └── README.md                 # This file
 ```
@@ -48,12 +60,10 @@ Files are named descriptively based on their content:
 
 ## 📊 Content Overview
 
-### Main Directory (26 files)
+### Main Directory (4 files)
 Core algorithms including:
 - **Search Algorithms**: Binary Search, Interpolation Search
-- **LeetCode Problems**: String manipulation, array operations, tree traversals
-- **Codeforces Problems**: Competitive programming challenges
-- **Utility Algorithms**: Prime number operations, permutations
+- **Utility Algorithms**: Prime number operations
 
 ### advancedConcept/ (4 files)
 Advanced tree implementations:
@@ -62,13 +72,13 @@ Advanced tree implementations:
 - Threaded Binary Tree
 - Tree traversal techniques
 
-### codeforces/ (3 files)
+### codeforces/ (11 files)
 Competitive programming solutions:
 - Problem solving from Codeforces contests
 - Optimization techniques
 - Mathematical problems
 
-### leetcodeprobs/ (49 files)
+### leetcodeprobs/ (70+ files)
 Extensive LeetCode problem solutions including:
 - **Array & String**: Two Sum, Product of Array, Group Anagrams
 - **Linked List**: Add Two Numbers, Rotate Linked List, Remove Duplicates
@@ -171,8 +181,8 @@ For questions, doubts, or suggestions, please reach out. Happy coding! 🚀
 
 ---
 
-**Last Updated**: May 18, 2026  
-**Total Problems**: 82 solutions  
+**Last Updated**: May 21, 2026  
+**Total Problems**: 82+ solutions  
 **Categories**: Arrays, Strings, Trees, Graphs, Linked Lists, Dynamic Programming, and more
 
 **Happy Learning & Coding!** 💻
