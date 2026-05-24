@@ -7,3 +7,5 @@
  //   const to the RIGHT of the *: The pointer itself is constant. The pointer is locked to one memory address, but you can alter the data sitting at that address.
 
  //   const on BOTH sides: Everything is constant. You cannot move the pointer, and you cannot change the data.
+
+ 
