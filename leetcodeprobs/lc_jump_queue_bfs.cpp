@@ -1,8 +1,12 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 struct node{
     int data;
     int index;
     node *next;
-}
+};
 class Solution {
 public:
     void insert(node *&head,node *&end,int val,int ind){
@@ -32,3 +36,21 @@ public:
         }
     }
 };
+
+void solve() {
+    
+}
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(NULL);
+
+    int t = 1;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
