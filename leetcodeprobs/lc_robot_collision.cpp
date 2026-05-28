@@ -116,6 +116,15 @@ public:
     }
 };
 int main() {
-    
+    // Problem: robot collision.
+    // Time Complexity: O(...) based on Solution::survivedRobotsHealths implementation.
+    // Space Complexity: O(...) based on Solution::survivedRobotsHealths implementation.
+    Solution obj;
+    vector<int> arg1 = {1,2,3,4,5};
+    vector<int> arg2 = {1,2,3,4,5};
+    string arg3 = "010101";
+    auto result = obj.survivedRobotsHealths(arg1, arg2, arg3);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

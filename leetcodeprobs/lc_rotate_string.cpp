@@ -19,6 +19,15 @@ public:
     }
 };
 
-int main()
-{
+int main() {
+    // Problem: rotate string.
+    // Time Complexity: O(...) based on Solution::rotateString implementation.
+    // Space Complexity: O(...) based on Solution::rotateString implementation.
+    Solution obj;
+    string arg1 = "010101";
+    string arg2 = "010101";
+    auto result = obj.rotateString(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
 }

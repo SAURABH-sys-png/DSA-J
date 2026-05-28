@@ -87,8 +87,14 @@ public:
         return res;
     }
 };
-int main()
-{
-
+int main() {
+    // Problem: alternating binary string.
+    // Time Complexity: O(...) based on Solution::minFlips implementation.
+    // Space Complexity: O(...) based on Solution::minFlips implementation.
+    Solution obj;
+    string arg1 = "010101";
+    auto result = obj.minFlips(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

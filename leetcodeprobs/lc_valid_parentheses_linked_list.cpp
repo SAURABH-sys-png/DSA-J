@@ -70,6 +70,14 @@ public:
 };
 
 int main() {
-    
+    // Problem: valid parentheses linked list.
+    // Time Complexity: O(...) based on Solution::isMatching implementation.
+    // Space Complexity: O(...) based on Solution::isMatching implementation.
+    Solution obj;
+    char arg1 = 'a';
+    char arg2 = 'a';
+    auto result = obj.isMatching(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

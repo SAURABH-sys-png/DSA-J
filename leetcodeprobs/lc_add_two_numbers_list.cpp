@@ -76,6 +76,14 @@ public:
 };
 
 int main() {
-    
+    // Problem: add two numbers list.
+    // Time Complexity: O(...) based on Solution::addTwoNumbers implementation.
+    // Space Complexity: O(...) based on Solution::addTwoNumbers implementation.
+    Solution obj;
+    ListNode* arg1 = nullptr;
+    ListNode* arg2 = nullptr;
+    auto result = obj.addTwoNumbers(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

@@ -30,11 +30,14 @@ public:
     }
 };
 
-int main()
-{
-
-    Solution s;
-    int num = 9300;
-
+int main() {
+    // Problem: minimum effort tasks.
+    // Time Complexity: O(...) based on Solution::separateDigits implementation.
+    // Space Complexity: O(...) based on Solution::separateDigits implementation.
+    Solution obj;
+    vector<int> arg1 = {1,2,3,4,5};
+    auto result = obj.separateDigits(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

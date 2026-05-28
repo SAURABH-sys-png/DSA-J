@@ -44,6 +44,13 @@ public:
 };
 
 int main() {
-    
+    // Problem: reverse integer.
+    // Time Complexity: O(...) based on Solution::reverse implementation.
+    // Space Complexity: O(...) based on Solution::reverse implementation.
+    Solution obj;
+    int arg1 = 5;
+    auto result = obj.reverse(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

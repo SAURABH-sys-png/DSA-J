@@ -44,8 +44,15 @@ public:
     }
 };
 
-int main()
-{
-
+int main() {
+    // Problem: rotate linked list.
+    // Time Complexity: O(...) based on Solution::rotateRight implementation.
+    // Space Complexity: O(...) based on Solution::rotateRight implementation.
+    Solution obj;
+    ListNode* arg1 = nullptr;
+    int arg2 = 5;
+    auto result = obj.rotateRight(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

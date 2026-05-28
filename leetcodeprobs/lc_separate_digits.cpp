@@ -49,7 +49,14 @@ public:
     }
 };
 
-int main()
-{
+int main() {
+    // Problem: separate digits.
+    // Time Complexity: O(...) based on Solution::minimumEffort implementation.
+    // Space Complexity: O(...) based on Solution::minimumEffort implementation.
+    Solution obj;
+    vector<vector<int>> arg1 = {{1,2,3},{4,5,6},{7,8,9}};
+    auto result = obj.minimumEffort(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

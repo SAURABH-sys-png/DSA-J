@@ -161,8 +161,16 @@ public:
     }
 };
 
-int main()
-{
-
+int main() {
+    // Problem: search 2d grid.
+    // Time Complexity: O(...) based on Solution::fromtoprow implementation.
+    // Space Complexity: O(...) based on Solution::fromtoprow implementation.
+    Solution obj;
+      = {1,2,3,4,5};
+    int arg2 = 5;
+    int arg3 = 5;
+    auto result = obj.fromtoprow(arg1, arg2, arg3);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

@@ -32,6 +32,13 @@ public:
     }
 };
 
-int main(){
-
+int main() {
+    // Problem: rotate matrix 90.
+    // Time Complexity: O(...) based on Solution::rotate implementation.
+    // Space Complexity: O(...) based on Solution::rotate implementation.
+    Solution obj;
+      = {{1,2,3},{4,5,6},{7,8,9}};
+    obj.rotate(arg1);
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
 }

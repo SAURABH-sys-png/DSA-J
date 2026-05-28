@@ -35,7 +35,14 @@ public:
     }
 };
 
-int main()
-{
+int main() {
+    // Problem: good array validator.
+    // Time Complexity: O(...) based on Solution::isGood implementation.
+    // Space Complexity: O(...) based on Solution::isGood implementation.
+    Solution obj;
+    vector<int> arg1 = {1,2,3,4,5};
+    auto result = obj.isGood(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

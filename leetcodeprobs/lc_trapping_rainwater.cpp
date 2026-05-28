@@ -94,10 +94,14 @@ public:
     }
 };
 
-int main()
-{
-
-    
-
+int main() {
+    // Problem: trapping rainwater.
+    // Time Complexity: O(...) based on Solution::trap implementation.
+    // Space Complexity: O(...) based on Solution::trap implementation.
+    Solution obj;
+    vector<int> arg1 = {1,2,3,4,5};
+    auto result = obj.trap(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

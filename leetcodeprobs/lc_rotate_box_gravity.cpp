@@ -63,7 +63,16 @@ public:
     }
 };
 
-int main()
-{
+int main() {
+    // Problem: rotate box gravity.
+    // Time Complexity: O(...) based on Solution::canMove implementation.
+    // Space Complexity: O(...) based on Solution::canMove implementation.
+    Solution obj;
+    vector<vector<char>> arg1 = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+    int arg2 = 5;
+    int arg3 = 5;
+    auto result = obj.canMove(arg1, arg2, arg3);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

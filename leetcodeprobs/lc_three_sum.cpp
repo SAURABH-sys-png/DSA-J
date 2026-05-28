@@ -48,6 +48,13 @@ public:
 };
 
 int main() {
-    
+    // Problem: three sum.
+    // Time Complexity: O(...) based on Solution::threeSum implementation.
+    // Space Complexity: O(...) based on Solution::threeSum implementation.
+    Solution obj;
+      = {1,2,3,4,5};
+    auto result = obj.threeSum(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

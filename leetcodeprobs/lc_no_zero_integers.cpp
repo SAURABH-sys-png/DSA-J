@@ -38,7 +38,14 @@ public:
     }
 };
 
-int main (){
-
-
+int main() {
+    // Problem: no zero integers.
+    // Time Complexity: O(...) based on Solution::hasZero implementation.
+    // Space Complexity: O(...) based on Solution::hasZero implementation.
+    Solution obj;
+    int arg1 = 5;
+    auto result = obj.hasZero(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
 }

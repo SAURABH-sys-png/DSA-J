@@ -48,6 +48,14 @@ public:
 };
 
 int main() {
-    
+    // Problem: minimum absolute difference.
+    // Time Complexity: O(...) based on Solution::smaller implementation.
+    // Space Complexity: O(...) based on Solution::smaller implementation.
+    Solution obj;
+    int arg1 = 5;
+    int arg2 = 5;
+    auto result = obj.smaller(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

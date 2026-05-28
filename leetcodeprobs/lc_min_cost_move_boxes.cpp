@@ -135,3 +135,15 @@ public:
         return res;
     }
 };
+
+int main() {
+    // Problem: min cost move boxes.
+    // Time Complexity: O(...) based on Solution::getBackwardPrefixSums implementation.
+    // Space Complexity: O(...) based on Solution::getBackwardPrefixSums implementation.
+    Solution obj;
+    vector<int> arg1 = {1,2,3,4,5};
+    auto result = obj.getBackwardPrefixSums(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
+}

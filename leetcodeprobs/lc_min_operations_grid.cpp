@@ -53,7 +53,15 @@ public:
     }
 };
 
-int main(){
-
-
+int main() {
+    // Problem: min operations grid.
+    // Time Complexity: O(...) based on Solution::minOperations implementation.
+    // Space Complexity: O(...) based on Solution::minOperations implementation.
+    Solution obj;
+      = {{1,2,3},{4,5,6},{7,8,9}};
+    int arg2 = 5;
+    auto result = obj.minOperations(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
 }

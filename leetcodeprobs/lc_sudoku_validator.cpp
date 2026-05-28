@@ -110,3 +110,15 @@ public:
         return true;
     }
 };
+
+int main() {
+    // Problem: sudoku validator.
+    // Time Complexity: O(...) based on Solution::isValidSudoku implementation.
+    // Space Complexity: O(...) based on Solution::isValidSudoku implementation.
+    Solution obj;
+      = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+    auto result = obj.isValidSudoku(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
+}

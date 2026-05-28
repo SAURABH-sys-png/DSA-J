@@ -84,6 +84,14 @@ public:
 
 
 int main() {
-    
+    // Problem: students sandwiches.
+    // Time Complexity: O(...) based on Solution::countStudents implementation.
+    // Space Complexity: O(...) based on Solution::countStudents implementation.
+    Solution obj;
+      = {1,2,3,4,5};
+      = {1,2,3,4,5};
+    auto result = obj.countStudents(arg1, arg2);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

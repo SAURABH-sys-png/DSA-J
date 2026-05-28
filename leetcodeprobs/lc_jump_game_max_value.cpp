@@ -54,8 +54,14 @@ public:
     }
 };
 
-int main()
-{
-
+int main() {
+    // Problem: jump game max value.
+    // Time Complexity: O(...) based on Solution::maxValue implementation.
+    // Space Complexity: O(...) based on Solution::maxValue implementation.
+    Solution obj;
+    vector<int> arg1 = {1,2,3,4,5};
+    auto result = obj.maxValue(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
     return 0;
 }

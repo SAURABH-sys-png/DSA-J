@@ -55,5 +55,13 @@ public:
 };
 
 int main() {
-    
+    // Problem: longest balanced substring.
+    // Time Complexity: O(...) based on Solution::longestBalanced implementation.
+    // Space Complexity: O(...) based on Solution::longestBalanced implementation.
+    Solution obj;
+    string arg1 = "010101";
+    auto result = obj.longestBalanced(arg1);
+    (void)result;
+    std::cout << "Demo executed successfully" << std::endl;
+    return 0;
 }
