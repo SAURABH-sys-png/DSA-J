@@ -10,12 +10,13 @@ public:
     int findMin(vector<int> &nums)
     {
 
-                int mini = *min_element(nums.begin(), nums.end());
+        int mini = *min_element(nums.begin(), nums.end());
         return mini;
     }
 };
 
-void solve(){
+void solve()
+{
     int n;
     cin >> n;
     vector<int> nums(n);
