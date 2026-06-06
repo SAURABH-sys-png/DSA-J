@@ -327,59 +327,25 @@ Modern C++ concepts, const-correctness, and competitive programming notes:
 
 | File | Why it counts |
 |------|----------------|
-| `leetcodeprobs/lc_robot_collision.cpp` | Real medium/hard simulation — sort, stack, health |
+| `leetcodeprobs/lc_robot_collision.cpp` | Real medium/hard simulation — sort, stack, health tracking |
 | `leetcodeprobs/lc_three_sum.cpp` | Canonical sort + two pointers + duplicate skip |
 | `leetcodeprobs/lc_unique_bsts.cpp` | Memoized interval DP — hard territory |
 | `leetcodeprobs/lc_jump_game_3.cpp` | Clean BFS + visited set |
-| `leetcodeprobs/lc_min_ops_to_modulo.cpp` | Non-trivial modeling (remainder buckets) |
+| `leetcodeprobs/lc_min_ops_to_modulo.cpp` | Non-trivial modeling (remainder buckets for even/odd positions) |
+| `leetcodeprobs/lc_rgb_string_optimized.cpp` | Clean greedy with minimal state |
 | `codeforces/codeforces_1.cpp` | Greedy case split (pack of 3 vs singles) |
 | `cses_probs/cses_coin_piles.cpp` | Correct game theory + multi-test |
-| `prime_pair_sieve.cpp` | Contest-shaped sieve + `solve()` |
+| `advancedConcept/prime_pair_sieve.cpp` | Contest-shaped sieve + `solve()` function |
 
 ---
 
 ## Fix immediately (highest ROI)
 
-1. **`cses_two_knights.cpp`** — wrong for n=2; use closed form, drop deep recursion.
-2. **`cses_two_set.cpp`** — remove extra `cout << "\n"` after `solve` if judge is strict.
-3. **Delete or fix** `lc_group_anagrams`, `lc_happy_number`, `lc_same_tree_check` — they teach bad habits.
-4. **Finish or delete** `_incomplete` trio + BFS stub `lc_jump_queue_bfs`.
-5. **Rename** mislabeled `lc_*` files to match actual problem.
-6. **Audit** `cf_gcd_lcm`, `cf_divisibility_check`, `cf_army`, `cf_divisible_groups`.
-
----
-
-## What to focus on next (priority order)
-
-> Do **not** add 50 new easy problems. **Close, correct, and compress** what you have first.
-
-### Phase 1 — Discipline (2–3 weeks)
-
-- **One file = one AC solution** per problem; archive old drafts in `drafts/` or delete them.
-- **CSES Introductory complete** — fix knights, finish chapter with 100% AC on judge.
-- **Monotonic stack** — finish `lc_daily_temperatures` properly; do 5 stack problems (496, 739 done, 84, 85, 907).
-- **Repo cleanup** — fix 6 broken files listed above; no `cout` debug in final versions.
-
-### Phase 2 — Core CP gaps (4–6 weeks)
-
-| Week focus | Topics | Target |
-|------------|--------|--------|
-| Graphs I | BFS/DFS, connected components, flood fill | 15 problems |
-| Graphs II | Topo sort, shortest path (Dijkstra 0–1 BFS) | 10 problems |
-| DSU | Union-find + Kruskal-style | 8 problems |
-| DP I | 1D/2D classic (knapsack, LIS, grid path) | 15 problems |
-| DP II | Interval DP (you started with BSTs) | 8 problems |
-
-**CSES next sections:** Sorting and Searching → Dynamic Programming (in order).
-
-**Codeforces:** Virtual contests — **only Div.2**, aim to **solve A + B** consistently before touching C.
-
-### Phase 3 — Interview + CP convergence (ongoing)
-
-- **Sliding window** (optimal O(n)) — 10 problems; replace erase-based substring code.
-- **Binary search on answer** — 8 problems (CSES + LC).
-- **Template library** — single `template.cpp`: fast I/O, `ll`, `debug` macro (off in submit), DSU, dijkstra snippets.
-- **Weekly rhythm:** 2 virtual CF contests + 3 new mediums + 1 re-solve old weak file.
+1. **`cses_two_knights.cpp`** — wrong for n=2; use closed form instead of deep recursion.
+2. **Delete or fix empty files** — `lc_group_anagrams`, `lc_happy_number`, `lc_jump_queue_bfs`.
+3. **Finish or delete** 3× `_incomplete` files + BFS stub.
+4. **Audit** `cf_gcd_lcm`, `cf_divisibility_check` — likely incomplete.
+5. **Fix assignment bugs** — `lc_no_of_ops_on_zeroes.cpp` has `if (n = no_of_zeroes)`.
 
 ### What to deprioritize for now
 
@@ -435,40 +401,16 @@ cin.tie(nullptr);
 
 ---
 
-## Showcase solutions (actually strong)
-
-| File | Why it counts |
-|------|----------------|
-| `leetcodeprobs/lc_robot_collision.cpp` | Real medium/hard simulation — sort, stack, health tracking |
-| `leetcodeprobs/lc_three_sum.cpp` | Canonical sort + two pointers + duplicate skip |
-| `leetcodeprobs/lc_unique_bsts.cpp` | Memoized interval DP — hard territory |
-| `leetcodeprobs/lc_jump_game_3.cpp` | Clean BFS + visited set |
-| `leetcodeprobs/lc_min_ops_to_modulo.cpp` | Non-trivial modeling (remainder buckets for even/odd positions) |
-| `leetcodeprobs/lc_rgb_string_optimized.cpp` | Clean greedy with minimal state |
-| `codeforces/codeforces_1.cpp` | Greedy case split (pack of 3 vs singles) |
-| `cses_probs/cses_coin_piles.cpp` | Correct game theory + multi-test |
-| `advancedConcept/prime_pair_sieve.cpp` | Contest-shaped sieve + `solve()` function |
-
----
-
-## Fix immediately (highest ROI)
-
-1. **`cses_two_knights.cpp`** — wrong for n=2; use closed form instead of deep recursion.
-2. **Delete or fix empty files** — `lc_group_anagrams`, `lc_happy_number`, `lc_jump_queue_bfs`.
-3. **Finish or delete** 3× `_incomplete` files + BFS stub.
-4. **Audit** `cf_gcd_lcm`, `cf_divisibility_check` — likely incomplete.
-5. **Fix assignment bugs** — `lc_no_of_ops_on_zeroes.cpp` has `if (n = no_of_zeroes)`.
-
----
-
 ## Learning path (priority order)
+
+> Do **not** add 50 new easy problems. **Close, correct, and compress** what you have first.
 
 ### Phase 1 — Discipline (2–3 weeks)
 
-- **One file = one AC solution** per problem; archive old drafts or delete.
-- **CSES Introductory complete** — 100% AC on judge (currently ~19/29).
-- **Monotonic stack** — finish `lc_daily_temperatures` properly.
-- **Repo cleanup** — remove debug prints, fix syntax errors.
+- **One file = one AC solution** per problem; archive old drafts in `drafts/` or delete them.
+- **CSES Introductory complete** — fix knights, finish chapter with 100% AC on judge.
+- **Monotonic stack** — finish `lc_daily_temperatures` properly; do 5 stack problems (496, 739 done, 84, 85, 907).
+- **Repo cleanup** — fix broken files listed above; no `cout` debug in final versions.
 
 ### Phase 2 — Core CP gaps (4–6 weeks)
 
@@ -477,7 +419,7 @@ cin.tie(nullptr);
 | Graphs I | BFS/DFS, connected components, flood fill | 15 problems |
 | Graphs II | Topo sort, shortest path (Dijkstra, 0–1 BFS) | 10 problems |
 | DSU | Union-find + Kruskal-style problems | 8 problems |
-| DP I | 1D/2D classic (knapsack, LIS, grid) | 15 problems |
+| DP I | 1D/2D classic (knapsack, LIS, grid path) | 15 problems |
 | DP II | Interval DP (you started with BSTs) | 8 problems |
 
 **CSES progression:** Sorting/Searching → Dynamic Programming (in order).
@@ -508,7 +450,7 @@ cin.tie(nullptr);
 
 ---
 
-**Last updated:** June 3, 2026  
+**Last updated:** June 7, 2026  
 **Assessment method:** Comprehensive read of all 128 `.cpp` files in the repository.
 
 *This README is an honest code quality assessment, not a problem count flex. Consistent one solid solution per problem beats 100 broken attempts.*
