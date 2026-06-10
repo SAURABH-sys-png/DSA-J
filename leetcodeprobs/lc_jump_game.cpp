@@ -1,48 +1,57 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-int minJumps(vector<int> &arr)
+class Solution
 {
-    int n = arr.size();
-
-    if (arr[0] == 0)
-        return -1;
-
-    int maxReach = 0;
-    int currReach = 0;
-    int jump = 0;
-
-    for (int i = 0; i < n; i++)
+public:
+    bool canJump(vector<int> &nums)
     {
-        maxReach = max(maxReach, i + arr[i]);
-        if (maxReach >= n - 1)
-        {
-            return jump + 1;
-        }
+        int n = nums.size();
 
-        if (i == currReach)
-        {
+        if (n == 0 || n == 1)
+            return true;
 
-            if (maxReach == i)
+        int maxReach = 0;
+        int currReach = 0;
+        int jump = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            maxReach = max(maxReach, i + nums[i]);
+            if (maxReach >= n - 1)
             {
-                return -1;
+                return true;
             }
 
-            else
+            if (i == currReach)
             {
-                jump++;
-                currReach = maxReach;
+
+                if (maxReach == i)
+                {
+                    return false;
+                }
+
+                else
+                {
+                    jump++;
+                    currReach = maxReach;
+                }
+            }
+
+            if (maxReach >= n - 1)
+            {
+                return true;
             }
         }
+
+        return false;
     }
-
-    return -1;
-}
+};
 
 int main()
 {
-    vector<int> arr = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
-    cout << minJumps(arr);
+    Solution sol;
+    vector<int> nums = {2, 3, 1, 1, 4};
+    cout << sol.canJump(nums) << endl;
     return 0;
 }
