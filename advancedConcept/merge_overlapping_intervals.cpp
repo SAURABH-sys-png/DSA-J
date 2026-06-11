@@ -6,25 +6,25 @@
     cout.tie(NULL);
 using namespace std;
 
-vector<vector<int>> mergepairs(vector<vector<int>> &merge_this)
+vector<vector<int>> mergepairs(vector<vector<int>> &intervals)
 {
-    sort(merge_this.begin(), merge_this.end());
-    int a = merge_this[0][0];
-    int b = merge_this[0][1];
+    sort(intervals.begin(), intervals.end());
+    int a = intervals[0][0];
+    int b = intervals[0][1];
 
     vector<vector<int>> res;
 
-    for (int i = 1; i < merge_this.size(); i++)
+    for (int i = 1; i < intervals.size(); i++)
     {
-        if (merge_this[i][0] > b)
+        if (intervals[i][0] > b)
         {
             res.push_back({a, b});
-            a = merge_this[i][0];
-            b = merge_this[i][1];
+            a = intervals[i][0];
+            b = intervals[i][1];
         }
-        else if (b >= merge_this[i][0] && b <= merge_this[i][1])
+        else if (b >= intervals[i][0] && b <= intervals[i][1])
         {
-            b = merge_this[i][1];
+            b = intervals[i][1];
         }
     }
 
@@ -34,8 +34,8 @@ vector<vector<int>> mergepairs(vector<vector<int>> &merge_this)
 
 int main()
 {
-    vector<vector<int>> merge_this = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-    vector<vector<int>> res = mergepairs(merge_this);
+    vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+    vector<vector<int>> res = mergepairs(intervals);
     for (int i = 0; i < res.size(); i++)
     {
         cout << res[i][0] << " " << res[i][1] << endl;
