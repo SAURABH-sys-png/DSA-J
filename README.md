@@ -1,7 +1,7 @@
 # DSA-J — Data Structures, Algorithms & Competitive Programming
 
 Personal C++ problem archive: **LeetCode**, **CSES**, **Codeforces**, tree implementations, and Modern C++ notes.  
-**128** `.cpp` files documented (June 2026).
+**217** `.cpp` files in repository (June 2026).
 
 ---
 
@@ -9,10 +9,10 @@ Personal C++ problem archive: **LeetCode**, **CSES**, **Codeforces**, tree imple
 
 ```
 DSA-J/
-├── cses_probs/           (29)  CSES Introductory / early problems
-├── codeforces/           (13)  Codeforces-style ad-hoc & math
-├── leetcodeprobs/        (81)  LeetCode-style + a few CF interactive
-├── advancedConcept/      (11)  BST, AVL (draft), heaps, threaded tree, search algorithms
+├── cses_probs/           (33)  CSES Introductory / early problems
+├── codeforces/           (18)  Codeforces-style ad-hoc & math
+├── leetcodeprobs/        (145) LeetCode-style + a few CF interactive
+├── advancedConcept/      (18)  BST, AVL (draft), heaps, threaded tree, search algorithms
 ├── ModernC++/             (3)   const / static / contest I/O notes
 └── README.md
 ```
@@ -21,23 +21,23 @@ DSA-J/
 
 ## Detailed File Documentation
 
-### advancedConcept/ (11 files)
+### advancedConcept/ (18 files)
 
 Core Data Structure implementations and advanced search techniques:
 
 | File | Topic | Status | Notes |
 |------|-------|--------|-------|
-| `avl_tree_implementation.cpp` | AVL Tree | **Draft** | Incomplete insert/balance logic; passes by value bug |
-| `b_tree.cpp` | B-Tree | **Stub** | Empty structure, no implementation |
-| `binary_search_basic.cpp` | Binary Search | ✓ Complete | Linear search on sorted array [1,23...100] for value 1; tracks iteration count |
-| `binary_search_tree.cpp` | BST | ✓ Complete | Insert (by reference), search, traversal, incomplete delete |
-| `heaps.cpp` | Max Heap | ✓ Complete | Dual classes: `insertion_Heaps` and `deletion_Heaps`; upheapify logic |
-| `interpolation_search.cpp` | Interpolation Search | ✓ Complete | Adaptive search formula: `mid = beg + (end-beg)*((num-arr[beg])/(arr[end]-arr[beg]))` |
-| `placeholder_greeting.cpp` | - | Stub | Unknown (not fully examined) |
-| `prime_pair_sieve.cpp` | Sieve + Pairs | ✓ Complete | Generates consecutive prime pairs; uses Sieve of Eratosthenes up to 200000 |
-| `threaded_binary_tree.cpp` | Threaded BT | Partial | Constructor, insert scaffolding with threading flags `lThread`, `rThread` |
-| `tree_inorder_traversal.cpp` | Tree Traversal | ✓ Complete | Classic recursive inorder (left → node → right) for LeetCode-style `TreeNode` |
-| `heaps.cpp` (dup note) | - | - | Appears twice in compile; heap operations only |
+| `ac_avl_tree_implementation.cpp` | AVL Tree | **Draft** | Incomplete insert/balance logic; passes by value bug |
+| `ac_b_tree.cpp` | B-Tree | **Stub** | Empty structure, no implementation |
+| `ac_binary_search_basic.cpp` | Binary Search | ✓ Complete | Linear search on sorted array [1,23...100] for value 1; tracks iteration count |
+| `ac_binary_search_tree.cpp` | BST | ✓ Complete | Insert (by reference), search, traversal, incomplete delete |
+| `ac_heaps.cpp` | Max Heap | ✓ Complete | Dual classes: `insertion_Heaps` and `deletion_Heaps`; upheapify logic |
+| `ac_interpolation_search.cpp` | Interpolation Search | ✓ Complete | Adaptive search formula: `mid = beg + (end-beg)*((num-arr[beg])/(arr[end]-arr[beg]))` |
+| `ac_placeholder_greeting.cpp` | - | Stub | Unknown (not fully examined) |
+| `ac_prime_pair_sieve.cpp` | Sieve + Pairs | ✓ Complete | Generates consecutive prime pairs; uses Sieve of Eratosthenes up to 200000 |
+| `ac_threaded_binary_tree.cpp` | Threaded BT | Partial | Constructor, insert scaffolding with threading flags `lThread`, `rThread` |
+| `ac_tree_inorder_traversal.cpp` | Tree Traversal | ✓ Complete | Classic recursive inorder (left → node → right) for LeetCode-style `TreeNode` |
+| `ac_heaps.cpp` (dup note) | - | - | Appears twice in compile; heap operations only |
 
 ---
 
@@ -59,7 +59,7 @@ Ad-hoc, greedy, and math problems (mostly Div.2 A/B difficulty):
 | `cf_sequence_generation.cpp` | Sequence from n | ⭐ Easy | ✓ Builds pattern: 2, then n, n-1... 3, then 1 |
 | `cf_simple_increment.cpp` | Special case n=67 | ⭐ Easy | ✓ Returns 67 if n==67, else n+1 |
 | `cf_tournaments.cpp` | Tournament winnability | ⭐⭐ Medium | ✓ Checks if jth element is max OR k>1 |
-| `codeforces_1.cpp` | Cost optimization | ⭐⭐ Medium | ✓ Uses 3*a vs b heuristic for bulk pricing |
+| `cf_codeforces_1.cpp` | Cost optimization | ⭐⭐ Medium | ✓ Uses 3*a vs b heuristic for bulk pricing |
 
 ---
 
@@ -97,7 +97,7 @@ CSES Introductory problems (foundational algorithms + number theory):
 | `cses_two_set.cpp` | Partition into two equal sets | - | Not fully examined |
 | `cses_two_sum.cpp` | Two sum problem | Two-pointer/hash | Not fully examined |
 | `cses_weird_algo.cpp` | Collatz-like sequence | Simulation | ✓ Implements: if even divide by 2, else 3*n+1 |
-| `playlist.cpp` | - | - | Not fully examined |
+| `cses_playlist.cpp` | - | - | Not fully examined |
 
 ---
 
@@ -221,7 +221,7 @@ LeetCode + Contest problems (arrays, trees, graphs, DP, strings):
 |------|---------|----------|--------|
 | `lc_contest_01.cpp` | Contest problem 1 | - | Present |
 | `lc_contest_02.cpp` | Contest problem 2 | - | Present |
-| `cf_interactive_query.cpp` | Interactive query (CF) | Interactive | Present |
+| `lc_cf_interactive_query.cpp` | Interactive query (CF) | Interactive | Present |
 | `lc_first.cpp` | First attempt | Practice | Present |
 | `lc_second.cpp` | Second attempt | Practice | Present |
 | `lc_third.cpp` | Third attempt | Practice | Present |
@@ -266,7 +266,7 @@ Modern C++ concepts, const-correctness, and competitive programming notes:
 5. **advancedConcept is coursework, not CP** — AVL mislabeled and broken; threaded BT is the only semi-serious DS file.
 6. **Organization hurts you** — misnamed files (`lc_product_array_except_self` ≠ product except self), debug `cout` left in “optimized” solutions, assignment bug (`if (n = no_of_zeroes)`).
 
-**Bottom line:** You are **not** “bad at math” or “unable to think algorithmically” — proofs: `lc_three_sum`, `lc_robot_collision`, `lc_min_ops_to_modulo`, `codeforces_1.cpp`, most of CSES intro. You **are** bad at **shipping one correct solution per problem**, **naming/organizing**, and **advanced topic coverage**. That gap is fixable; it is not a talent ceiling.
+**Bottom line:** You are **not** “bad at math” or “unable to think algorithmically” — proofs: `lc_three_sum`, `lc_robot_collision`, `lc_min_ops_to_modulo`, `cf_codeforces_1.cpp`, most of CSES intro. You **are** bad at **shipping one correct solution per problem**, **naming/organizing**, and **advanced topic coverage**. That gap is fixable; it is not a talent ceiling.
 
 ---
 
@@ -274,7 +274,7 @@ Modern C++ concepts, const-correctness, and competitive programming notes:
 
 | Area | Level | Evidence |
 |------|-------|----------|
-| **Greedy / ad-hoc intuition** | ★★★☆☆ | `cses_increasing_array`, `cses_coin_piles`, `codeforces_1`, `lc_rgb_string_optimized` |
+| **Greedy / ad-hoc intuition** | ★★★☆☆ | `cses_increasing_array`, `cses_coin_piles`, `cf_codeforces_1`, `lc_rgb_string_optimized` |
 | **Basic math / counting** | ★★★☆☆ | `cses_trailing_zeros`, `cses_missing_number`, `cses_number_spiral`, `lc_min_ops_to_modulo` |
 | **Two pointers / sorting tricks** | ★★★☆☆ | `lc_three_sum`, `lc_two_sum_sorted`, `lc_prefix_freq` |
 | **BFS / reachability on indices** | ★★☆☆☆ | `lc_jump_game_3`, `lc_jump_game_7` |
@@ -282,7 +282,7 @@ Modern C++ concepts, const-correctness, and competitive programming notes:
 | **Interval DP / combinatorics** | ★★★☆☆ | `lc_unique_bsts` |
 | **Contest I/O habits** | ★★☆☆☆ | `bits/stdc++.h`, `ios::sync_with_stdio`, `solve()` on CSES + newer LC |
 | **Persistence / iteration** | ★★★★☆ | Multiple drafts per problem; you revisit hard ideas |
-| **Sieve / number theory (when focused)** | ★★☆☆☆ | `prime_pair_sieve.cpp` |
+| **Sieve / number theory (when focused)** | ★★☆☆☆ | `ac_prime_pair_sieve.cpp` |
 
 ---
 
@@ -333,9 +333,9 @@ Modern C++ concepts, const-correctness, and competitive programming notes:
 | `leetcodeprobs/lc_jump_game_3.cpp` | Clean BFS + visited set |
 | `leetcodeprobs/lc_min_ops_to_modulo.cpp` | Non-trivial modeling (remainder buckets for even/odd positions) |
 | `leetcodeprobs/lc_rgb_string_optimized.cpp` | Clean greedy with minimal state |
-| `codeforces/codeforces_1.cpp` | Greedy case split (pack of 3 vs singles) |
+| `codeforces/cf_codeforces_1.cpp` | Greedy case split (pack of 3 vs singles) |
 | `cses_probs/cses_coin_piles.cpp` | Correct game theory + multi-test |
-| `advancedConcept/prime_pair_sieve.cpp` | Contest-shaped sieve + `solve()` function |
+| `advancedConcept/ac_prime_pair_sieve.cpp` | Contest-shaped sieve + `solve()` function |
 
 ---
 
