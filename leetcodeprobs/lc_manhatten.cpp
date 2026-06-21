@@ -1,16 +1,12 @@
 #include <bits/stdc++.h>
 #define ll long long
-#define fastio               \
-    ios::sync_with_stdio(0); \
-    cin.tie(0);              \
-    cout.tie(NULL);
+#define fastio ios::sync_with_stdio(0); cin.tie(0); cout.tie(NULL);
 using namespace std;
 
-class Solution
-{
+
+class Solution {
 public:
-    int maxDistance(string moves)
-    {
+    int maxDistance(string moves) {
         int x = 0;
         int y = 0;
         int n = moves.size();
@@ -37,20 +33,23 @@ public:
             {
                 down++;
             }
-            else
-            {
+            else{
                 count++;
             }
-        }
-        x = abs(right - left) + count;
-        y = abs(up - down);
 
-        return x + y;
+            
+            
+        }
+        x = abs(right-left) + count;
+        y = abs(up-down);
+
+        return x+y;
+        
     }
 };
 
-int main()
-{
+int main() {
+    
 
     return 0;
 }
