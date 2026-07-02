@@ -1,0 +1,1 @@
+{"name":"Local: lc_counting_steps","url":"/home/saurabh/gitrepos/DSA-J/leetcodeprobs/lc_counting_steps.cpp","tests":[{"id":1783001941303,"input":"5,1,6,2","output":"11"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saurabh/gitrepos/DSA-J/leetcodeprobs/lc_counting_steps.cpp","group":"local","local":true}
