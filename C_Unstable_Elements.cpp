@@ -83,7 +83,6 @@ void solve()
 
     // i have the freq of each leement
 }
-
 int main()
 {
     int t = 1;
