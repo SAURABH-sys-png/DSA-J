@@ -45,15 +45,38 @@ void solve()
         }
     }
 
-     // 2 1 1 3 3 1 2 3
+    // 2 1 1 3 3 1 2 3
 
+    // 1  // 0 1 2 2 2 3 3 3
+    // 2,3// 1 1 1 2 3 3 4 5
+    // 1,2// 1 2 3 3 3 4 5 5
+    // 3  // 0 0 0 1 1 0 0 2
 
-//1  // 0 1 2 2 2 3 3 3
-//2,3// 1 1 1 2 3 3 4 5
-//1,2// 1 2 3 3 3 4 5 5
-//3  // 0 0 0 1 1 0 0 2
+    //
+}
 
-    // 
+int just_big_ind(set<int> s, int x)
+{
+    auto it = s.lower_bound(x);
+    if (it == s.begin())
+    {
+        return *it;
+    }
+    else if (it == s.end())
+    {
+        it--;
+        return *it;
+    }
+    else
+    {
+        int a = *it;
+        it--;
+        int b = *it;
+        if (x - b < a - x)
+            return b;
+        else
+            return a;
+    }
 }
 
 int main()

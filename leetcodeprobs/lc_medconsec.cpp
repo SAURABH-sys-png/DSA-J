@@ -49,6 +49,7 @@ public:
 
 int main()
 {
+    fastio
     string s = "10203004";
     vector<vector<int>> queries = {{0, 7}, {1, 3}, {4, 6}};
 
