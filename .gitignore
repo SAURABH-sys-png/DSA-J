@@ -1,0 +1,31 @@
+# Compiled executables
+*.out
+
+# Object files
+*.o
+*.obj
+
+# Static/Dynamic libraries
+*.a
+*.so
+*.dll
+*.dylib
+
+# Debug files
+*.dSYM/
+*.stackdump
+
+# Editor files
+.vscode/
+.idea/
+
+# CMake
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+Makefile
+
+# Temporary files
+*.tmp
