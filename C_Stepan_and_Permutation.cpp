@@ -38,7 +38,6 @@ void solve()
             return;
         }
     }
-
     cout << "YES\n";
 }
 
