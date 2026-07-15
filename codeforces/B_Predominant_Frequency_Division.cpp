@@ -8,75 +8,56 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    cin >> n;
-    vector<int> nums(n);
-    vector<int> ones(n);
-    int count1 = 0;
-    vector<int> two_threes(n);
-    int count23 = 0;
-    vector<int> one_twos(n);
-    int count12 = 0;
-    vector<int> threes(n);
-    int count3 = 0;
+    int n, k;
+    cin >> n >> k;
 
+    vector<int> arr(n);
+    unordered_map<int, int> mp;
     for (int i = 0; i < n; i++)
     {
-        cin >> nums[i];
-        if (nums[i] == 1)
-        {
-            count1++;
-            ones[i] = count1;
-        }
-        if (nums[i] == 2 || nums[i] == 3)
-        {
-            count23++;
-            two_threes[i] = count23;
-        }
-        if (nums[i] == 1 || nums[i] == 2)
-        {
-            count12++;
-            one_twos[i] = count12;
-        }
-        if (nums[i] == 3)
-        {
-            count3++;
-            threes[i] = count3;
-        }
+        cin >> arr[i];
+        mp[arr[i]]++;
     }
-
-    // 2 1 1 3 3 1 2 3
-
-    // 1  // 0 1 2 2 2 3 3 3
-    // 2,3// 1 1 1 2 3 3 4 5
-    // 1,2// 1 2 3 3 3 4 5 5
-    // 3  // 0 0 0 1 1 0 0 2
-
-    //
-}
-
-int just_big_ind(set<int> s, int x)
-{
-    auto it = s.lower_bound(x);
-    if (it == s.begin())
+    vector<pair<int, int>> psbt;
+    psbt.push_back({n, mp.size()});
+    while (mp.size() != 0)
     {
-        return *it;
+        n=0;
+        for (const auto &[key, val] : mp)
+        {
+
+            int value = val;
+            value--;
+            if (value == 0)
+            {
+                mp.erase(key);
+            }
+            else
+            {
+                mp[key] = value;
+            }
+            n+=value;
+
+        }
+        if (mp.size() == 0)
+        {
+            break;
+        }
+        psbt.push_back({n, mp.size()});
     }
-    else if (it == s.end())
-    {
-        it--;
-        return *it;
+
+    int ans = 0;
+    for (int i = 0; i < psbt.size(); i++){
+        if(psbt[i].first <= k){
+            int dif = k-psbt[i].first;
+            if (dif%(psbt[i].second==0))
+            {
+                ans++;
+            }
+            
+        }
     }
-    else
-    {
-        int a = *it;
-        it--;
-        int b = *it;
-        if (x - b < a - x)
-            return b;
-        else
-            return a;
-    }
+    cout<<ans<<'\n';
 }
 
 int main()

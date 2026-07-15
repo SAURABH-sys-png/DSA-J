@@ -11,35 +11,29 @@ void solve()
     int n;
     cin >> n;
     vector<int> nums(n);
-    int count = 0;
-    for (int i = 0; i < n; i++)
+    int count_2 = 0;
+    bool flag = false;
+    for (int i = 0; i < n; ++i)
     {
         cin >> nums[i];
-    }
-    for (int i = 0; i < n; i++)
-    {
         if (nums[i] >= 3)
         {
-            cout << "YES" << '\n';
-            return;
+            flag = true;
         }
-        else if (nums[i] == 2)
+        if (nums[i] == 2)
         {
-            count++;
+            count_2++;
         }
     }
 
-    if (count >= 2)
+    if (flag || count_2 >= 2)
     {
-        cout << "YES" << '\n';
+        cout << "YES" << endl;
     }
     else
     {
-        cout << "NO" << '\n';
+        cout << "NO" << endl;
     }
-
-    // n is the total type of cards
-    // nums holds the freq of each character
 }
 
 int main()

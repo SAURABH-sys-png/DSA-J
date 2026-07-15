@@ -8,81 +8,63 @@ using namespace std;
 
 void solve()
 {
-    int ans = 0;
     int n, k;
     cin >> n >> k;
-    map<int, int> mp;
 
+    vector<int> arr(n);
+    unordered_map<int, int> mp;
     for (int i = 0; i < n; i++)
     {
-        int num;
-        cin >> num;
-
-        mp[num]++; // Increment the frequency for this number
+        cin >> arr[i];
+        mp[arr[i]]++;
     }
-
+    vector<pair<int, int>> psbt;
+    psbt.push_back({n, mp.size()});
     while (mp.size() != 0)
     {
-        if (n == k)
+        n = 0;
+
+        for (auto it = mp.begin(); it != mp.end();)
         {
-            ans++;
-        }
-        else if (k > n)
-        {
-            int unq_keys = mp.size();
-            int diff = k - n;
-            if (diff % unq_keys == 0)
+            it->second--;
+
+            if (it->second == 0)
             {
-                n = 0;
-                int fc = diff / unq_keys;
-                for (auto &[key, value] : mp)
-                {
-                    value += fc;
-                    n += value;
-                }
+                it = mp.erase(it); // erase returns the next iterator
             }
             else
             {
-                for (auto it = mp.begin(); it != mp.end();)
-                {
-                    it->second--; // Decrement val
-                    n--;          // Decrement total count
-
-                    if (it->second == 0)
-                    {
-                        it = mp.erase(it); // Erases and advances to the next element
-                    }
-                    else
-                    {
-                        ++it; // Only advance manually if we didn't erase
-                    }
-                }
+                n += it->second;
+                ++it;
             }
         }
-        else
+        if (n == 0)
         {
-            for (auto it = mp.begin(); it != mp.end();)
-            {
-                it->second--; // Decrement val
-                n--;          // Decrement total count
-
-                if (it->second == 0)
-                {
-                    it = mp.erase(it); // Erases and advances to the next element
-                }
-                else
-                {
-                    ++it; // Only advance manually if we didn't erase
-                }
-            }
+            break;
         }
-        
+        psbt.push_back({n, mp.size()});
     }
 
+    int ans = 0;
+    for (int i = 0; i < psbt.size(); i++)
+    {
+        if (psbt[i].first <= k)
+        {
+            int dif = k - psbt[i].first;
+            // if (i>0 && psbt[i].second == psbt[i-1].second)
+            // {
+            //     continue;
+            // }
+            
+            if (dif % (psbt[i].second) == 0)
+            {
+                ans++;
+            }
+        }
+    }
     cout << ans << '\n';
-
-    // i have the freq of each leement
 }
+
 int main()
 {
     int t = 1;
