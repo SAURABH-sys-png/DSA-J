@@ -44,28 +44,36 @@ public:
 
         // A bit optimised way
 
-        int n = nums.size();
-        vector<int> first;
-        first.push_back(0);
-        for (int i = 0; i < n - 1; i++)
-        {
-            for (int j = i + 1; j < n; j++)
-            {
-                first.push_back(nums[i] ^ nums[j]);
-            }
-        }
-        sort(first.begin(), first.end());
-        first.erase(unique(first.begin(), first.end()), first.end());
-        set<int> res;
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < first.size(); j++)
-            {
-                res.insert(nums[i] ^ first[j]);
-            }
-        }
+        // int n = nums.size();
+        // vector<int> first;
+        // first.push_back(0);
+        // for (int i = 0; i < n - 1; i++)
+        // {
+        //     for (int j = i + 1; j < n; j++)
+        //     {
+        //         first.push_back(nums[i] ^ nums[j]);
+        //     }
+        // }
+        // sort(first.begin(), first.end());
+        // first.erase(unique(first.begin(), first.end()), first.end());
+        // set<int> res;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     for (int j = 0; j < first.size(); j++)
+        //     {
+        //         res.insert(nums[i] ^ first[j]);
+        //     }
+        // }
 
-        return res.size();
+        // return res.size();
+        // 2^11 = 2048
+        int n = nums.size();
+        vector<bool> present(2048,false);
+        for(int i : nums){
+            present[i] = true;
+        }
+        vector<bool> dpt(2048,false);
+
     }
 };
 
