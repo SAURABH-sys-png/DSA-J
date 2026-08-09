@@ -1,7 +1,7 @@
 # DSA-J — Data Structures, Algorithms & Competitive Programming
 
 Personal C++ problem archive: **LeetCode**, **CSES**, **Codeforces**, tree implementations, and Modern C++ notes.  
-**222** `.cpp` files in repository (July 2026).
+**347** `.cpp` files in repository (July 2026).
 
 ---
 
@@ -9,11 +9,12 @@ Personal C++ problem archive: **LeetCode**, **CSES**, **Codeforces**, tree imple
 
 ```
 DSA-J/
-├── cses_probs/           (33)  CSES Introductory / Sorting & Searching
-├── codeforces/           (35)  CF ad-hoc, math, and live contest solutions
-├── leetcodeprobs/        (131) LeetCode-style + weekly/contest practice
-├── advancedConcept/      (20)  BST, AVL (draft), heaps, greedy classics, search algorithms
-├── ModernC++/             (3)   const / static / contest I/O notes
+├── cses_probs/           (44)  CSES Introductory / Sorting & Searching
+├── codeforces/           (62)  CF ad-hoc, math, and live contest solutions
+├── leetcodeprobs/        (190) LeetCode-style + weekly/contest practice
+├── advancedConcept/      (28)  BST, AVL (draft), heaps, greedy classics, search algorithms
+├── ModernC++/            (5)   const / static / contest I/O notes
+├── misc/                 (12)  scratch and practice utilities
 └── README.md
 ```
 
@@ -21,7 +22,7 @@ DSA-J/
 
 ## Detailed File Documentation
 
-### advancedConcept/ (20 files)
+### advancedConcept/ (28 files)
 
 Core data structure implementations, greedy classics, and search techniques:
 
@@ -50,7 +51,7 @@ Core data structure implementations, greedy classics, and search techniques:
 
 ---
 
-### codeforces/ (35 files)
+### codeforces/ (62 files)
 
 Ad-hoc, greedy, math, and live contest problems. Split into legacy `cf_*` files and contest-named solutions.
 
@@ -103,7 +104,7 @@ Ad-hoc, greedy, math, and live contest problems. Split into legacy `cf_*` files 
 
 ---
 
-### cses_probs/ (33 files)
+### cses_probs/ (44 files)
 
 CSES Introductory + Sorting & Searching problems:
 
@@ -145,7 +146,7 @@ CSES Introductory + Sorting & Searching problems:
 
 ---
 
-### leetcodeprobs/ (131 files)
+### leetcodeprobs/ (190 files)
 
 LeetCode + weekly/contest problems (arrays, trees, graphs, DP, strings):
 
@@ -318,7 +319,7 @@ LeetCode + weekly/contest problems (arrays, trees, graphs, DP, strings):
 
 ---
 
-### ModernC++/ (3 files)
+### ModernC++/ (5 files)
 
 Modern C++ concepts, const-correctness, and competitive programming notes:
 

@@ -29,3 +29,7 @@ Makefile
 
 # Temporary files
 *.tmp
+*.swp
+*~
+.DS_Store
+__pycache__/
