@@ -1,55 +1,54 @@
 #include <bits/stdc++.h>
-#define ll long long
-#define fastio               \
-    ios::sync_with_stdio(0); \
-    cin.tie(0);              \
-    cout.tie(NULL);
 using namespace std;
+#define ztn(i, n) for (int i = 0; i < n; i++)
+#define ll long long
 
-long long maximumScore(vector<int> &nums, int cost)
-{
-    int n = nums.size();
-
-    vector<long long> dp(n + 2, 0);
-
-    for (int i = n - 1; i >= 0; i--)
-    {
-        // Remove only this element
-        dp[i] = 1LL * nums[i] - cost + dp[i + 1];
-
-        // Remove this and next together
-        if (i + 1 < n)
-        {
-            dp[i] = max(dp[i],
-                        1LL * max(nums[i], nums[i + 1]) - cost + dp[i + 2]);
-        }
-    }
-
-    return dp[0];
-}
+#define vpid vector<pair<int, int>>
 
 void solve()
 {
-    int n, c;
-    cin >> n >> c;          // Read input first
+    int size, cost;
+    cin >> size >> cost;
+    vpid arr(size);
+    for (int i = 0; i < size; i++)
+    {
+        int tmp;
+        cin >> tmp;
+        int val = tmp - cost;
 
-    vector<int> nums(n);    // Now n is known
+        arr[i] = {tmp, val};
+    }
+    sort(arr.begin(), arr.end());
 
-    for (int i = 0; i < n; i++)
-        cin >> nums[i];
+    int st = 0;
+    int end = size - 1;
+    ll res = 0;
+    while (st < end)
+    {
+        if (arr[st].second > 0)
+            res += arr[st].first + arr[end].first - 2 * cost;
+        else
+            res += arr[end].first - cost;
 
-    cout << maximumScore(nums, c) << '\n';
+        st++;
+        end--;
+    }
+
+    if (st == end)
+        res += arr[st].first - cost;
+    cout << res << '\n';
 }
-
 int main()
 {
-    fastio;
 
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int t;
     cin >> t;
-
     while (t--)
+    {
         solve();
+    }
 
     return 0;
 }

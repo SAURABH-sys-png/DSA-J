@@ -1,72 +1,45 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
 
 using namespace std;
-using namespace __gnu_pbds;
-
-#define ll long long
-#define ull unsigned long long
-#define ld long double
-
-#define fastio                   \
-    ios::sync_with_stdio(false); \
-    cin.tie(nullptr);
 
 void solve()
 {
     int n;
     cin >> n;
-    if (n == 1)
-    {
-        cout << "NO" << '\n';
-        for (int i = 0; i < n; i++)
-        {
-            int k;
-            cin >> k;
-        }
-        return;
-    }
 
-    vector<int> even;
-    vector<int> odd;
-    for (int i = 0; i < n; i++)
+    int min_odd = INT_MAX;
+    int max_ev = 0;
+
+    for (int i = 1; i <= n; i++)
     {
-        if (i % 2 == 0)
+        int temp;
+        cin >> temp;
+        if (i & 1)
         {
-            int k;
-            cin >> k;
-            even.push_back(k);
+            min_odd = min(min_odd, temp);
         }
         else
         {
-            int k;
-            cin >> k;
-            odd.push_back(k);
+            max_ev = max(max_ev, temp);
         }
     }
-
-    sort(even.begin(), even.end());
-    sort(odd.begin(), odd.end());
-
-    int eB = odd[odd.size() - 1];
-    int oS = even[0];
-    if (abs(eB - oS) > 1)
-    {
-        cout << "YES" << '\n';
-        return;
-    }
-    else
-    {
+    if(n&1){ 
         cout << "NO" << '\n';
         return;
     }
+    if (min_odd - max_ev > 1)
+        cout << "YES" << '\n';
+    else
+        cout << "NO" << '\n';
 }
-
 int main()
 {
-    fastio int T = 1;
-    cin >> T;
-    while (T--)
+    int t;
+    cin >> t;
+    while (t--)
+    {
         solve();
+    }
+
     return 0;
 }
