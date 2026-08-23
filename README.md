@@ -9,7 +9,7 @@ Personal C++ problem archive: **LeetCode**, **CSES**, **Codeforces**, tree imple
 
 ```
 DSA-J/
-├── cses_probs/           (44)  CSES Introductory / Sorting & Searching
+cc
 ├── codeforces/           (62)  CF ad-hoc, math, and live contest solutions
 ├── leetcodeprobs/        (190) LeetCode-style + weekly/contest practice
 ├── advancedConcept/      (28)  BST, AVL (draft), heaps, greedy classics, search algorithms
@@ -30,7 +30,7 @@ Core data structure implementations, greedy classics, and search techniques:
 |------|-------|--------|-------|
 | `ac_activity_selection.cpp` | Activity Selection | ✓ Complete | Sort by end time; greedy interval scheduling |
 | `ac_avl_tree_implementation.cpp` | AVL Tree | **Draft** | Incomplete insert/balance logic; passes by value bug |
-| `ac_b_tree.cpp` | B-Tree | **Stub** | Empty structure, no implementation |
+| `ac_b_tree.cpp` | B-Tree | **Stub** | Empty structure, no implemeiiikkkjjjntation |
 | `ac_binary_search_basic.cpp` | Binary Search | ✓ Complete | Linear search on sorted array [1,23...100] for value 1; tracks iteration count |
 | `ac_binary_search_tree.cpp` | BST | ✓ Complete | Insert (by reference), search, traversal, incomplete delete |
 | `ac_connect_n_ropes.cpp` | Connect N Ropes | ✓ Complete | Min-heap greedy; classic Huffman-style rope joining |
