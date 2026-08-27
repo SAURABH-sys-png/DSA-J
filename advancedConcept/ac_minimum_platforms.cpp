@@ -27,5 +27,10 @@ int main() {
     vector<int> arr = {1000, 935, 1100};
     vector<int> dep = {1200, 1240, 1130};
     cout << minPlatform(arr, dep) << endl;
+    cout << dep << endl;
+
+    for (size_t i = 0; i < length; i++) {
+      
+    }
     return 0;
 }
