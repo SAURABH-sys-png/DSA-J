@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+#include <string>
+
+using namespace std;
+
+class Solution {
+public:
+    int countCommas(int n) {
+      return max(n-999,0);
+    }
+};
+
+int main(){
+  return 0;
+}
